@@ -17,10 +17,10 @@ module "aws-functions" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-guides/master/governance/third-generation/aws/aws-functions/aws-functions.sentinel"
 }
 
-policy "enforce-mandatory-tags" {
-  source = "./policies/common/enforce-mandatory-tags.sentinel"
-  enforcement_level = "hard-mandatory"
-}
+# policy "enforce-mandatory-tags" {
+#   source = "./policies/common/enforce-mandatory-tags.sentinel"
+#   enforcement_level = "hard-mandatory"
+# }
 
 policy "require-private-acl-and-kms-for-s3-buckets" {
   source = "./policies/s3/require-private-acl-and-kms-for-s3-buckets.sentinel"
